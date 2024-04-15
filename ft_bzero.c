@@ -1,35 +1,33 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memset.c                                        :+:      :+:    :+:   */
+/*   ft_bzero.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: bfiochi- <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/04/14 16:59:23 by bfiochi-          #+#    #+#             */
-/*   Updated: 2024/04/15 17:06:17 by bfiochi-         ###   ########.fr       */
+/*   Created: 2024/04/15 17:00:49 by bfiochi-          #+#    #+#             */
+/*   Updated: 2024/04/15 17:40:23 by bfiochi-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	*ft_memset(void *s, int c, size_t n)
+void	ft_bzero(void *s, size_t n)
 {
-	while (n > 0)
-	{
-		((char *)s)[n - 1] = c;
-		n--;
-	}
-	return (s);
+	ft_memset(s, '\0', n);
 }
 
 /*int	main(void)
 {
 	char	str1[] = "Beatriz";
 	char	str2[] = "Beatriz";
-	
-	memset(str1 + 2, '*', 5);
-	printf("%s \n", str1);
+	size_t	i = 4;
 
-	ft_memset(str2 + 2, '*', 5);
-	printf("%s", str2);
+	bzero(str1, i);
+	printf("%s \n", str1);
+	printf("%s \n", str1 + i);
+
+	ft_bzero(str2, i);
+	printf("%s \n", str2);
+	printf("%s", str2 + i);
 }*/
