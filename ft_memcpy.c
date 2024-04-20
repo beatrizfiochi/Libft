@@ -6,7 +6,7 @@
 /*   By: bfiochi- <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/15 17:48:06 by bfiochi-          #+#    #+#             */
-/*   Updated: 2024/04/15 18:13:45 by bfiochi-         ###   ########.fr       */
+/*   Updated: 2024/04/20 15:31:28 by bfiochi-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,10 +14,9 @@
 
 void	*ft_memcpy(void *dest, const void *src, size_t n)
 {
-	while (n > 0)
+	while (n--)
 	{
-		((char *)dest)[n - 1] = ((const char *)src) [n - 1];
-		n--;
+		((char *)dest)[n] = ((const char *)src) [n];
 	}
 	return (dest);
 }
@@ -27,11 +26,13 @@ void	*ft_memcpy(void *dest, const void *src, size_t n)
 	char	src1[] = "******************";
 	char	dest1[] = "Beatriz";
 	char	dest2[] = "Beatriz";
-	size_t	i = 10;
+//	char	*test = 0;
+//	O valor do i deve ser menor ou igual ao tamanho das variáveis dest
+	size_t	i = 3;
 
 	memcpy(dest1, src1, i);
-	printf("%s \n", dest1);
+	printf("%s\n", dest1);
 
 	ft_memcpy(dest2, src1, i);
-	printf("%s", dest2);
+	printf("%s\n", dest2);
 }*/
