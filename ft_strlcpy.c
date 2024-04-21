@@ -6,37 +6,35 @@
 /*   By: bfiochi- <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/20 17:09:36 by bfiochi-          #+#    #+#             */
-/*   Updated: 2024/04/20 19:14:02 by bfiochi-         ###   ########.fr       */
+/*   Updated: 2024/04/21 12:27:08 by bfiochi-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include	"libft.h"
-#include <bsd/string.h>
 
 size_t	ft_strlcpy(char *dst, const char *src, size_t size)
 {
-	int	i;
+	size_t	i;
 
-	i = 1;
-
-	while (size - 1 > 0)
+	if (size == 0)
+		return (ft_strlen(src));
+	i = 0;
+	while (src[i] != '\0' && i < (size - 1))
 	{
 		dst[i] = src[i];
 		i++;
 	}
+	dst[i] = '\0';
 	return	(ft_strlen(src));
 }
 
-int	main(void)
+/*int	main(void)
 {
-	char	str1[] = "123456789";
+	char	str[] = "Beatriz";
 	char	dst[100];
-	char	dst2[100];
 	int	i = 3;
 
-	printf("%ld\n", strlcpy(dst, str1, i));
-	printf("%s\n", dst);
 
-	printf("%ld\n", ft_strlcpy(dst2, str1, i));
-	printf("%s\n", dst2);
-}
+	printf("%ld\n", ft_strlcpy(dst, str, i));
+	printf("%s\n", dst);
+}*/
