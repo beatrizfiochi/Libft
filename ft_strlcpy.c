@@ -6,11 +6,11 @@
 /*   By: bfiochi- <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/20 17:09:36 by bfiochi-          #+#    #+#             */
-/*   Updated: 2024/04/21 12:27:08 by bfiochi-         ###   ########.fr       */
+/*   Updated: 2024/04/21 14:11:34 by bfiochi-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include	"libft.h"
+#include "libft.h"
 
 size_t	ft_strlcpy(char *dst, const char *src, size_t size)
 {
@@ -25,7 +25,7 @@ size_t	ft_strlcpy(char *dst, const char *src, size_t size)
 		i++;
 	}
 	dst[i] = '\0';
-	return	(ft_strlen(src));
+	return (ft_strlen(src));
 }
 
 /*int	main(void)
