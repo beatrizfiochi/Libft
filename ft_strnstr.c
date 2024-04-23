@@ -6,7 +6,7 @@
 /*   By: bfiochi- <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/22 17:30:26 by bfiochi-          #+#    #+#             */
-/*   Updated: 2024/04/22 17:31:27 by bfiochi-         ###   ########.fr       */
+/*   Updated: 2024/04/23 16:30:06 by bfiochi-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,4 +14,37 @@
 
 char	*ft_strnstr(const char *big, const char *little, size_t len)
 {
+	size_t	big_i;
+	size_t	little_i;
+	char	*str;
+
+	big_i = 0;
+	little_i = 0;
+	str = (char *)big;
+	if (little == 0)
+		return (str);
+	while (big =! '\0')
+	{
+		if (big[big_i] == little[little_i] && big_i < len)
+		{
+			big_i++;
+			little_i++;
+			if (little_i == 0)
+				return (s[big_i - little_i]);
+		}
+		else
+		{
+			big_i = big_i - (little_i - 1);
+			little_i = 0;
+		}
+	}
+	return (0);
+}
+
+int	main(void)
+{
+	char	big_s[] = "Pereira";
+	char	little_s[] = "eir";
+
+	printf("%s\n", ft_strnstr(big_s, little_s, 3);
 }
