@@ -6,7 +6,7 @@
 /*   By: bfiochi- <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/22 17:30:26 by bfiochi-          #+#    #+#             */
-/*   Updated: 2024/04/23 16:30:06 by bfiochi-         ###   ########.fr       */
+/*   Updated: 2024/04/28 11:32:36 by bfiochi-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,16 +21,16 @@ char	*ft_strnstr(const char *big, const char *little, size_t len)
 	big_i = 0;
 	little_i = 0;
 	str = (char *)big;
-	if (little == 0)
+	if (little[little_i] == '\0')
 		return (str);
-	while (big =! '\0')
+	while (big[big_i] != '\0')
 	{
-		if (big[big_i] == little[little_i] && big_i < len)
+		if ((big[big_i] == little[little_i]) && (big_i < len))
 		{
 			big_i++;
 			little_i++;
-			if (little_i == 0)
-				return (s[big_i - little_i]);
+			if (little[little_i] == '\0')
+				return (&str[big_i - little_i]);
 		}
 		else
 		{
@@ -41,10 +41,10 @@ char	*ft_strnstr(const char *big, const char *little, size_t len)
 	return (0);
 }
 
-int	main(void)
+/*int	main(void)
 {
 	char	big_s[] = "Pereira";
-	char	little_s[] = "eir";
+	char	little_s[] = "eira";
 
-	printf("%s\n", ft_strnstr(big_s, little_s, 3);
-}
+	printf("%s\n", ft_strnstr(big_s, little_s, 10));
+}*/
