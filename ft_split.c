@@ -6,7 +6,7 @@
 /*   By: bfiochi- <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/05 13:29:39 by bfiochi-          #+#    #+#             */
-/*   Updated: 2024/05/05 14:42:36 by bfiochi-         ###   ########.fr       */
+/*   Updated: 2024/05/07 11:52:13 by bfiochi-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,10 +27,8 @@ static int	ft_count(const char *s, char c)
 {
 	int		words;
 	char	*str;
-	size_t	i;
 
 	words = 0;
-	i = 0;
 	str = (char *)s;
 	while (*str != '\0')
 	{
