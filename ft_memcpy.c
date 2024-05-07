@@ -6,7 +6,7 @@
 /*   By: bfiochi- <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/15 17:48:06 by bfiochi-          #+#    #+#             */
-/*   Updated: 2024/04/21 12:32:08 by bfiochi-         ###   ########.fr       */
+/*   Updated: 2024/05/07 14:51:56 by bfiochi-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,8 @@
 
 void	*ft_memcpy(void *dest, const void *src, size_t n)
 {
+	if (!dest && !src)
+		return (0);
 	while (n--)
 	{
 		((char *)dest)[n] = ((const char *)src)[n];
