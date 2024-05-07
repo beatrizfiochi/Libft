@@ -6,7 +6,7 @@
 /*   By: bfiochi- <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/20 15:52:56 by bfiochi-          #+#    #+#             */
-/*   Updated: 2024/04/21 14:04:05 by bfiochi-         ###   ########.fr       */
+/*   Updated: 2024/05/07 14:54:21 by bfiochi-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,6 +22,8 @@ void	*ft_memmove(void *dest, const void *src, size_t n)
 
 	tmp_dest = dest;
 	tmp_src = src;
+	if (!dest && !src)
+		return (0);
 	if (tmp_dest > tmp_src)
 		return (ft_memcpy(dest, src, n));
 	else
