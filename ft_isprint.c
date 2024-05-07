@@ -6,7 +6,7 @@
 /*   By: bfiochi- <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/14 15:51:58 by bfiochi-          #+#    #+#             */
-/*   Updated: 2024/04/14 16:42:08 by bfiochi-         ###   ########.fr       */
+/*   Updated: 2024/05/07 12:29:52 by bfiochi-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 int	ft_isprint(int c)
 {
-	if (c > 32 && c < 127)
+	if (c >= 32 && c < 127)
 	{
 		return (1);
 	}
@@ -26,5 +26,6 @@ int	ft_isprint(int c)
 	printf("%d \n", ft_isprint('f'));
 	printf("%d \n", ft_isprint(56));
 	printf("%d \n", ft_isprint(' '));
-	printf("%d", ft_isprint(127));
+	printf("%d\n", ft_isprint(127));
+	printf("%d", ft_isprint(33));
 }*/
