@@ -6,7 +6,7 @@
 #    By: bfiochi- <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/05/07 10:47:59 by bfiochi-          #+#    #+#              #
-#    Updated: 2024/05/07 11:03:29 by bfiochi-         ###   ########.fr        #
+#    Updated: 2024/05/07 11:50:03 by bfiochi-         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -41,5 +41,5 @@ fclean: clean
 
 re: fclean all
 
-.PHONY: all clean fclean re
+.PHONY: all clean fclean re bonus
        
