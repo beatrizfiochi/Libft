@@ -6,7 +6,7 @@
 /*   By: bfiochi- <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/28 14:34:14 by bfiochi-          #+#    #+#             */
-/*   Updated: 2024/04/28 15:24:48 by bfiochi-         ###   ########.fr       */
+/*   Updated: 2024/05/07 15:20:21 by bfiochi-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@ void	*ft_calloc(size_t nmemb, size_t size)
 
 	count_size = nmemb * size;
 	ptr = malloc(count_size);
-	if (count_size == '\0')
+	if (!ptr)
 		return (0);
 	ft_bzero(ptr, count_size);
 	return (ptr);
